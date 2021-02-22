@@ -1,23 +1,30 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SampleClassification.Model;
 using TextAnalysisAPI.Interfaces;
+using TextAnalysisAPI.services;
 
 namespace TextAnalysis.Controllers
-{
-
-    
+{ 
     public class ReviewController : BaseApiController 
     {
-        private readonly IConsumeModalService modalService;
-
-        public ReviewController(IConsumeModalService modalService)
+        private readonly IConsumeModalService _consumeModalService;
+        public ReviewController(IConsumeModalService consumeModalService)
         {
-            this.modalService = modalService;
+            _consumeModalService = consumeModalService;
+        }
+        [HttpGet]
+        public async Task<ActionResult<string>> Get() 
+        {
+            return Ok("reviewText");
         }
 
-        public async Task<ActionResult<string>> GetReviewResult(string reviewText) 
+        [HttpPost]
+        public async Task<ActionResult<string>> Post(string reviewText)
         {
-            return  "yes";
+    
+            var sentament =  await _consumeModalService.ReviewTextAsync(reviewText);
+            return Ok(sentament);
         }
     }
 }
