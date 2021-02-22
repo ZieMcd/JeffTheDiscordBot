@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using SampleClassification.Model;
 using TextAnalysisAPI.Interfaces;
 
@@ -5,7 +6,7 @@ namespace TextAnalysisAPI.services
 {
     public class ConsumeModalService : IConsumeModalService
     {
-         public bool ReviewText(string text)
+        public Task<string> ReviewTextAsync(string text)
         {
             var input = new ModelInput() 
             {
@@ -13,7 +14,8 @@ namespace TextAnalysisAPI.services
             };
 
             ModelOutput result = ConsumeModel.Predict(input);
-            return result.Prediction == "1" ? true : false;
+            
+            return Task.FromResult<string> (result.Prediction);
         }
     }
 }

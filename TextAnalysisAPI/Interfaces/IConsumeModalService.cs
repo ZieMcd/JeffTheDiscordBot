@@ -1,7 +1,9 @@
+using System.Threading.Tasks;
+
 namespace TextAnalysisAPI.Interfaces
 {
     public interface IConsumeModalService
     {
-         public bool ReviewText(string text);
+         public Task<string> ReviewTextAsync(string text);
     }
 }

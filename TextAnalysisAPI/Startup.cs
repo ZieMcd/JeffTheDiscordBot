@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using TextAnalysisAPI.Interfaces;
+using TextAnalysisAPI.services;
 
 namespace TextAnalysis
 {
@@ -28,6 +30,7 @@ namespace TextAnalysis
         {
 
             services.AddControllers();
+            services.AddScoped<IConsumeModalService, ConsumeModalService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TextAnalysis", Version = "v1" });
@@ -44,7 +47,7 @@ namespace TextAnalysis
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TextAnalysis v1"));
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
