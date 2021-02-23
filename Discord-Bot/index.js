@@ -1,18 +1,30 @@
 'use strict';
 
 const  { getResponses }  = require("./message-response");
-
 const Discord = require('discord.js');
 const {prefix, token} = require('./config.json');
+const https = require("https")
 const client = new Discord.Client();
 
 var line = 0;
 
 client.once('ready',() => {
-    console.log('Ready!')
+    console.log('Client Ready!')    
 })
 
+https.get('https://localhost:5001/api/review', (response) => {
+        let data = '';
+        response.on('data', (chunk) => {
+            data += chunk;
+        });
 
+        response.on('end', () => {
+            console.log(data);
+        });
+    })
+    .on('error', (error) =>{
+        console.log(error);
+    })
 
 client.on('message',message =>{
     console.log(message.content);
