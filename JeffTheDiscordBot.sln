@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeffTheDiscordBot.BackEnd.API", "JeffTheDiscordBot.BackEnd.API\JeffTheDiscordBot.BackEnd.API.csproj", "{63FC624D-673A-40AE-9D4B-44E11BC9D13C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeffTheDiscordBot.BackEnd.API", "JeffTheDiscordBot.BackEnd\JeffTheDiscordBot.BackEnd.API\JeffTheDiscordBot.BackEnd.API.csproj", "{7D57B6BA-6069-42F8-8CEF-4E87A0F5746A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeffTheDiscordBot.BackEnd.SentimentAnalysisLibrary", "JeffTheDiscordBot.BackEnd.SentimentAnalysisLibrary\JeffTheDiscordBot.BackEnd.SentimentAnalysisLibrary.csproj", "{782F9F79-24F3-436A-97BF-CB69998696A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RacismModel.ConsoleApp", "JeffTheDiscordBot.BackEnd\RacismModel\RacismModel.ConsoleApp\RacismModel.ConsoleApp.csproj", "{258EF4B1-0C5B-4C54-9256-C49849A91A06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,13 +16,13 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{63FC624D-673A-40AE-9D4B-44E11BC9D13C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63FC624D-673A-40AE-9D4B-44E11BC9D13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63FC624D-673A-40AE-9D4B-44E11BC9D13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63FC624D-673A-40AE-9D4B-44E11BC9D13C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{782F9F79-24F3-436A-97BF-CB69998696A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{782F9F79-24F3-436A-97BF-CB69998696A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{782F9F79-24F3-436A-97BF-CB69998696A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{782F9F79-24F3-436A-97BF-CB69998696A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D57B6BA-6069-42F8-8CEF-4E87A0F5746A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D57B6BA-6069-42F8-8CEF-4E87A0F5746A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D57B6BA-6069-42F8-8CEF-4E87A0F5746A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D57B6BA-6069-42F8-8CEF-4E87A0F5746A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{258EF4B1-0C5B-4C54-9256-C49849A91A06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{258EF4B1-0C5B-4C54-9256-C49849A91A06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{258EF4B1-0C5B-4C54-9256-C49849A91A06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{258EF4B1-0C5B-4C54-9256-C49849A91A06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
